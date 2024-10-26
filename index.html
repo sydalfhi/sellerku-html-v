@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sellerku</title>
-    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <!-- <link rel="stylesheet" href="assets/css/tailwind.css"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
@@ -125,7 +126,8 @@
                             tabindex="-1" aria-labelledby="drawer-label">
                             <h5 id="drawer-label"
                                 class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400">
-                                <img src="./assets/logo/warna.png" alt="logo" class="w-32 h-auto" alt="logo">
+                                <img src="./assets/logo/warna.png" alt="logo" class="w-32 h-auto" alt="logo"
+                                    loading="lazy">
 
                             </h5>
                             <button type="button" data-drawer-hide="drawer-example" aria-controls="drawer-example"
@@ -222,36 +224,21 @@
         </div>
     </header>
 
-    <script>
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 0) {
-                header.classList.add('backdrop-blur-lg');
-                header.classList.remove('bg-white');
-                header.classList.add('bg-opacity-50'); // opsional untuk transparansi
-                header.classList.add('text-black'); // opsional untuk transparansi
-            } else {
-                header.classList.remove('backdrop-blur-lg');
-                header.classList.add('bg-white');
-                header.classList.remove('bg-opacity-70');
-                header.classList.add('text-gray'); // opsional untuk transparansi
-            }
-        });
-    </script>
 
 
 
-    <section class="bg-red-300">
+    <section>
         <div class=" text-gray-600 container mx-auto  flex  px-10  pt-16 pb-24 md:flex-row flex-col items-center">
             <div
                 class="justify-center  mx-auto lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center ">
 
 
                 <div data-aos-duration="500" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
-                    class="font-bold flex justify-around items-center text-[#C653F3] bg-[#F8E5FF] text-xs px-6 py-1.5 rounded-full">
-                    <img class="w-3" src="./assets/logo/keranjang.png" alt="keranjang"><span>•</span> Aplikasi Poin
-                    Of Sale Terlengkap
+                    class="font-bold flex justify-around items-center text-[#020546] bg-[#F8E5FF] text-xs px-6 py-1.5 rounded-full">
+                    <img class="w-3" src="./assets/logo/keranjang.png" alt="keranjang"><span>•</span> <span
+                        id="element"></span>
                 </div>
+
 
 
                 <h1 data-aos-duration="500" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -281,7 +268,7 @@
             </div>
             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6" data-aos="fade-down"
                 data-aos-anchor-placement="top-bottom" data-aos-duration="300">
-                <img class="object-cover  scale-[1.1]" alt="hero" src="./assets/image/hero.jpg">
+                <img class="object-cover  scale-[1.1]" alt="hero" src="./assets/image/hero.jpg" loading="lazy">
             </div>
         </div>
     </section>
@@ -290,7 +277,7 @@
 
     <!-- Pelanggan -->
     <p class="text-center dark:text-white text-[#020546]">TELAH DIPERCAYA BANYAK PERUSAHAN</p>
-    <section class="mt-0 mb-20 px-5 lg:px-10 overflow-x-hidden ">
+    <section class="mt-0 mb-20 px-5 lg:px-10  ">
 
         <div class="mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6">
             <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
@@ -323,7 +310,7 @@
 
 
 
-    <section id="about" class="my-12 overflow-x-hidden  bg-[#020546]  ">
+    <section id="about" class="my-12   bg-[#020546]  ">
         <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
 
             <div
@@ -331,7 +318,7 @@
 
                 <div data-aos="fade-down-left" data-aos-duration="500" data-aos-easing="ease-in-sine" class="md:5/12 lg:w-1/2 rounded-lg
                 overflow-hidden">
-                    <img src="./assets/image/ftiru.png" alt="image" loading="lazy" width="" height=""
+                    <img src="./assets/image/fitur.png" alt="image" loading="lazy" width="" height=""
                         class="w-full scale-110">
                 </div>
 
@@ -352,15 +339,19 @@
                     <p class="text-gray-100">
                     <ul class="list-disc  text-white">
                         <li class="flex justify-start items-center space-x-3"><img src="./assets/logo/check.svg"
-                                class="w-8" alt="check"> <span> Antarmuka intuitif yang memudahkan navigasi. </span>
+                                class="w-8" loading="lazy" alt="check"> <span> Antarmuka intuitif yang memudahkan
+                                navigasi. </span>
                         </li>
                         <li class="flex justify-start items-center space-x-3"><img src="./assets/logo/check.svg"
-                                class="w-8" alt="check"> <span> Semua alat penting untuk laporan dan manajemen
+                                class="w-8" loading="lazy" alt="check"> <span> Semua alat penting untuk laporan dan
+                                manajemen
                                 inventaris. </span></li>
                         <li class="flex justify-start items-center space-x-3"><img src="./assets/logo/check.svg"
-                                class="w-8" alt="check"> <span> Siap pakai tanpa pelatihan rumit. </span></li>
+                                class="w-8" loading="lazy" alt="check"> <span> Siap pakai tanpa pelatihan rumit. </span>
+                        </li>
                         <li class="flex justify-start items-center space-x-3"><img src="./assets/logo/check.svg"
-                                class="w-8" alt="check"> <span> Pantau kinerja bisnis secara langsung. </span></li>
+                                class="w-8" loading="lazy" alt="check"> <span> Pantau kinerja bisnis secara langsung.
+                            </span></li>
                     </ul>
                     </p>
                 </div>
@@ -400,12 +391,6 @@
                             Dengan keamanan yang terjamin, Anda dapat mengakses sistem POS kapan saja dan di mana saja,
                             meningkatkan fleksibilitas dan efisiensi bisnis Anda. </p>
                     </div>
-                    <div class="p-6 pt-0">
-                        <button data-ripple-light="true" type="button"
-                            class="select-none rounded-lg bg-[#020546] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                            Read More
-                        </button>
-                    </div>
                 </div>
                 <!--  -->
 
@@ -419,17 +404,10 @@
                             class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                             Manajemen Cabang
                         </h5>
-                        <p
-                            class="block font-sans text-base text-sm font-light leading-relaxed text-inherit antialiased">
+                        <p class="block font-sans  text-sm font-light leading-relaxed text-inherit antialiased">
                             Memudahkan Anda mengawasi semua lokasi usaha dalam satu sistem. Dengan laporan terintegrasi
                             dan analisis kinerja setiap cabang, Anda dapat mengambil keputusan yang lebih baik untuk
                             pertumbuhan bisnis Anda. </p>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <button data-ripple-light="true" type="button"
-                            class="select-none rounded-lg bg-[#020546] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                            Read More
-                        </button>
                     </div>
                 </div>
                 <!--  -->
@@ -449,12 +427,6 @@
                             berbagai metode pembayaran dan memproses transaksi secara cepat, memastikan pengalaman
                             pelanggan yang lancar dan memuaskan. </p>
                     </div>
-                    <div class="p-6 pt-0">
-                        <button data-ripple-light="true" type="button"
-                            class="select-none rounded-lg bg-[#020546] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                            Read More
-                        </button>
-                    </div>
                 </div>
                 <!--  -->
 
@@ -472,12 +444,6 @@
                             Memungkinkan Anda untuk mengontrol stok barang secara real-time. Dengan pembaruan otomatis
                             dan notifikasi untuk stok rendah, Anda dapat menghindari kekurangan atau kelebihan barang,
                             serta memastikan operasional bisnis berjalan lancar. </p>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <button data-ripple-light="true" type="button"
-                            class="select-none rounded-lg bg-[#020546] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                            Read More
-                        </button>
                     </div>
                 </div>
                 <!--  -->
@@ -498,12 +464,6 @@
                             yang terorganisir, Anda dapat mempercepat proses penjualan dan pengelolaan stok, serta
                             mengurangi kesalahan dalam pencatatan produk. </p>
                     </div>
-                    <div class="p-6 pt-0">
-                        <button data-ripple-light="true" type="button"
-                            class="select-none rounded-lg bg-[#020546] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                            Read More
-                        </button>
-                    </div>
                 </div>
                 <!--  -->
 
@@ -522,12 +482,6 @@
                             dapat disesuaikan, Anda dapat memberikan bukti pembayaran profesional kepada pelanggan,
                             sekaligus meningkatkan pengalaman berbelanja mereka. </p>
                     </div>
-                    <div class="p-6 pt-0">
-                        <button data-ripple-light="true" type="button"
-                            class="select-none rounded-lg bg-[#020546] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                            Read More
-                        </button>
-                    </div>
                 </div>
                 <!--  -->
 
@@ -536,8 +490,7 @@
         </div>
     </section>
 
-    <section
-        class="flex  bg-gradient-to-r from-[#020546] to-[#020546]/90 p-5 md:p-8 rounded-xl mx-4 md:mx-14 overflow-x-hidden "
+    <section class="flex  bg-gradient-to-r from-[#020546] to-[#020546]/90 p-5 md:p-8 rounded-xl mx-4 md:mx-14  "
         data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300" data-aos-duration="900">
         <div class="text-white  flex flex-col md:flex-row justify-center md:justify-between w-full items-center">
             <div class="w-full flex justify-start items-start flex-col">
@@ -550,7 +503,7 @@
 
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6 mt-16 pt-5 overflow-x-hidden ">
+    <section class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6 mt-16 pt-5  ">
         <div class="md:w-2/3 lg:w-1/2">
             <h2 class="my-8 text-2xl font-bold text-[#020546] dark:text-white md:text-4xl" data-aos="fade-up"
                 data-aos-duration="500" data-aos-delay="100">
@@ -568,40 +521,8 @@
             <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="300"
                 class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
                 <div class="relative space-y-8 py-12 p-8">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 48 48">
-                        <g fill="none">
-                            <path fill="url(#fluentColorBuilding480)"
-                                d="M9.25 44C8.56 44 8 43.44 8 42.75V8.25A4.25 4.25 0 0 1 12.25 4h15.5A4.25 4.25 0 0 1 32 8.25V19h3.75A4.25 4.25 0 0 1 40 23.25v19.5c0 .69-.56 1.25-1.25 1.25z" />
-                            <path fill="url(#fluentColorBuilding481)"
-                                d="M34 37.25V44H24l-1-4l1-5h7.75A2.25 2.25 0 0 1 34 37.25" />
-                            <path fill="url(#fluentColorBuilding482)"
-                                d="M14 37.25V44h10v-9h-7.75A2.25 2.25 0 0 0 14 37.25" />
-                            <path fill="url(#fluentColorBuilding483)"
-                                d="M18 14a2 2 0 1 1-4 0a2 2 0 0 1 4 0m-2 9a2 2 0 1 0 0-4a2 2 0 0 0 0 4m2 5a2 2 0 1 1-4 0a2 2 0 0 1 4 0m6-12a2 2 0 1 0 0-4a2 2 0 0 0 0 4m2 5a2 2 0 1 1-4 0a2 2 0 0 1 4 0m-2 9a2 2 0 1 0 0-4a2 2 0 0 0 0 4m10-2a2 2 0 1 1-4 0a2 2 0 0 1 4 0" />
-                            <defs>
-                                <linearGradient id="fluentColorBuilding480" x1="8" x2="46.163" y1="5.25" y2="44.336"
-                                    gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#29c3ff" />
-                                    <stop offset="1" stop-color="#2764e7" />
-                                </linearGradient>
-                                <linearGradient id="fluentColorBuilding481" x1="24.375" x2="31.769" y1="33.571"
-                                    y2="41.887" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#0067bf" />
-                                    <stop offset="1" stop-color="#003580" />
-                                </linearGradient>
-                                <linearGradient id="fluentColorBuilding482" x1="14.357" x2="21.258" y1="36.875"
-                                    y2="44.045" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#0067bf" />
-                                    <stop offset="1" stop-color="#003580" />
-                                </linearGradient>
-                                <linearGradient id="fluentColorBuilding483" x1="20" x2="26" y1="10" y2="34"
-                                    gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#fdfdfd" />
-                                    <stop offset="1" stop-color="#b3e0ff" />
-                                </linearGradient>
-                            </defs>
-                        </g>
-                    </svg>
+                    <img src="assets/image/data-suplier.svg" alt=" data-suplier-icon" loading="lazy">
+
                     <div class="space-y-2">
                         <h5 style="min-height: 60px;"
                             class="text-xl font-semibold text-[#020546] dark:text-white transition group-hover:text- secondary">
@@ -613,12 +534,8 @@
                     </div>
                     <a href="#" class="flex items-center justify-between group-hover:text-secondary">
                         <span class="text-sm">Read more</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        <img src="assets/image/go.svg" alt=" go-icon" loading="lazy"
                             class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-                            <path fill-rule="evenodd"
-                                d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
-                                clip-rule="evenodd"></path>
-                        </svg>
                     </a>
                 </div>
             </div>
@@ -627,202 +544,8 @@
             <div data-aos="fade-down" data-aos-duration="300" data-aos-delay="400"
                 class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
                 <div class="relative space-y-8 py-12 p-8">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 128 128">
-                        <path fill="#fff" d="M-183.97 248.8h302.33v169.12h-302.33z" />
-                        <path fill="#dea66c"
-                            d="M62.54 4.84L10.38 31.73c-1.14.67-1.47 1.67-1.46 3.12l.1 1.81L64.09 64.9l54.94-27.79s.06-.28.06-1.26c0 0-.05-1.29-.34-1.89c-.32-.68-1-1.29-1.44-1.66c-1.17-.97-2.34-1.83-4.33-2.95C84.45 13.22 65.69 4.91 65.69 4.91c-1.21-.45-2.21-.61-3.15-.07" />
-                        <path fill="#b38251"
-                            d="M9.74 96.16c3.04 2.01 8.59 4.65 14.2 7.69c13.04 7.06 29.52 15.64 37.72 19.01c1.11.46 1.77.68 2.54.72c.57.03 1.51-.35 1.51-.35s-1.53-55.19-1.62-58.34c-.09-3.08-1.38-4.1-2.52-4.84c-1.78-1.14-5.64-2.92-5.64-2.92s-13.52-6.72-27.02-13.8c-6.42-3.37-11.84-6.82-17.67-9.66c-1.07-.51-2.33.13-2.33 1.33v59.8c0 .57.35 1.05.83 1.36" />
-                        <path fill="#966239"
-                            d="M117.58 96.51L65.82 123.2c-.83.43-1.82-.17-1.82-1.11l.09-57.18c0-.55-.17-1.76-.34-2.24c-.47-1.4.55-1.96 1.01-2.19l51.34-26.44c1.36-.7 2.99.29 2.99 1.82v58.19c0 1.03-.58 1.98-1.51 2.46" />
-                        <path fill="#212121"
-                            d="M94.46 47.59S66.09 62.1 65.63 63.33c-.46 1.22 22.26-9.7 24.92-11.07c3.01-1.55 26.65-14.19 26.65-15.58c.01-1.14-22.74 10.91-22.74 10.91"
-                            opacity="0.5" />
-                        <g fill="#212121" opacity="0.5">
-                            <path
-                                d="M12.81 92.85c3.69 1.86 7.35 3.78 11.91 6.11v-1.78c-4.54-2.32-8.21-4.23-11.91-6.11zm7.77.81c1.04.53 1.56.8 2.54 1.3c.01-3.1.01-4.65.02-7.75c-.98-.5-1.49-.76-2.52-1.29c-.02 3.1-.03 4.64-.04 7.74m-6.46-3.32c.86.44 1.34.69 2.32 1.19l.05-7.72c-.99-.51-1.47-.75-2.34-1.21c-.01 3.1-.02 4.65-.03 7.74" />
-                            <path
-                                d="M18.95 85.99c2.37 1.21 3.63 1.86 5.72 2.92c-1.04-1.89-1.61-2.85-2.75-4.79c-1.17.76-1.78 1.13-2.97 1.87m-6.14-3.15c1.77.92 2.96 1.53 5.3 2.73c-1.16-1.95-1.74-2.92-2.81-4.83c-1.09.79-1.6 1.2-2.49 2.1" />
-                        </g>
-                        <g fill="#212121" opacity="0.5">
-                            <path
-                                d="M31.81 101.4c.83.43 1.26.66 2.09 1.09c-.06-3.68-.09-5.52-.16-9.2c-.8-.42-1.2-.63-2-1.04c.03 3.66.04 5.49.07 9.15" />
-                            <path
-                                d="M28.76 100.75c3.04 1.6 5.4 2.8 8.32 4.36c-.02-1.05-.83-2.32-1.93-2.91c-1.72-.91-2.7-1.41-4.44-2.32c-1.12-.57-1.95-.16-1.95.87m5.79-10.39l1.28 2.71c-.4.85-.61 1.28-1.03 2.12c.36-.03.54-.04.9-.07c.48-.64.72-.96 1.18-1.6c-.42-.99-.64-1.49-1.08-2.48c1.22.67 1.82 1.01 2.93 1.66c0 3.58-2.34 5.16-5.86 3.32c-3.52-1.83-5.85-5.92-5.85-9.51c2.62 1.31 4.38 2.17 7.53 3.85" />
-                        </g>
-                        <path fill="#ffe0b2"
-                            d="M100.74 41.49c-.5-.37-54.19-28.42-54.19-28.42l-16.66 8.61l55.05 28.39l.03.03l16.11-8.25s-.03-.08-.12-.18c-.07-.06-.19-.15-.22-.18" />
-                        <path fill="#bf9f85"
-                            d="M101 41.73c-9.12 4.49-16.06 8.34-16.06 8.34c.23.23.24.53.24.68c-.03 1.16-.05 2.08-.08 3.23c-.14 5.95-.22 11.91-.42 17.86c.67-.4 1.48.48 2.09 0c.94-.74 2.94-4 3.24-4.1c.4-.13.83-.03 1.24-.05c1.8-.1 5.83-3.77 6.69-3.94c.83-.16 3.57.37 3.57.37s-.19-18.15-.26-21.2c-.02-1.08-.25-1.19-.25-1.19" />
-                        <path fill="#dea66c"
-                            d="m-98.73 4.84l-51.83 26.68c-2.52 1.48-1.8 5.09-1.8 5.09l55.17 28.3l55.07-27.86c.05-.17.11-1.21-.15-3.19c-.14-1.04-3.25-2.94-6.03-4.51C-76.82 13.22-95.58 4.91-95.58 4.91c-1.21-.45-2.2-.61-3.15-.07" />
-                        <path fill="#bf8049"
-                            d="M-151.53 96.16c3.04 2.01 8.59 4.65 14.2 7.69c13.04 7.06 29.52 15.64 37.72 19.01c2.45 1.01 3.75.51 3.75.51s-1.15-56.3-1.11-59.45c.02-1.32-1.59-3.12-2.74-3.86c-1.78-1.14-5.64-2.92-5.64-2.92s-13.52-6.72-27.02-13.8c-6.42-3.37-11.84-6.82-17.67-9.66c-1.06-.52-2.33.12-2.32 1.31v59.8c0 .58.36 1.06.83 1.37" />
-                        <path fill="#9e673c"
-                            d="m-43.69 96.51l-51.76 26.69c-.83.43-1.82-.17-1.82-1.11l.09-57.18c0-.55-.41-1.98-.56-2.48c-.14-.5.35-1.51.81-1.74l51.76-26.66c1.36-.7 2.99.29 2.99 1.82v58.19c0 1.04-.58 1.99-1.51 2.47" />
-                        <path fill="#212121"
-                            d="M-70.71 52.26c3.01-1.55 26.65-14.19 26.65-15.58c0-1.14-22.75 10.91-22.75 10.91S-95.18 62.1-95.64 63.33c-.45 1.22 22.26-9.7 24.93-11.07"
-                            opacity="0.5" />
-                        <g fill="#212121" opacity="0.5">
-                            <path
-                                d="M-148.46 92.85c3.69 1.86 7.35 3.78 11.91 6.11v-1.78c-4.54-2.32-8.21-4.23-11.91-6.11zm7.77.81c1.04.53 1.56.8 2.54 1.3c.01-3.1.01-4.65.02-7.75c-.98-.5-1.49-.76-2.52-1.29c-.01 3.1-.02 4.64-.04 7.74m-6.46-3.32c.86.44 1.34.69 2.32 1.19l.05-7.72c-.99-.51-1.47-.75-2.34-1.21c-.01 3.1-.02 4.65-.03 7.74" />
-                            <path
-                                d="M-142.32 85.99c2.37 1.21 3.63 1.86 5.72 2.92c-1.04-1.89-1.61-2.85-2.75-4.79c-1.17.76-1.78 1.13-2.97 1.87m-6.14-3.15c1.77.92 2.96 1.53 5.3 2.73c-1.16-1.95-1.74-2.92-2.81-4.83c-1.09.79-1.6 1.2-2.49 2.1" />
-                        </g>
-                        <g fill="#212121" opacity="0.5">
-                            <path
-                                d="M-129.46 101.4c.83.43 1.26.66 2.09 1.09c-.06-3.68-.09-5.52-.16-9.2c-.8-.42-1.2-.63-2-1.04c.03 3.66.04 5.49.07 9.15" />
-                            <path
-                                d="M-132.51 100.75c3.04 1.6 5.4 2.8 8.32 4.36c-.02-1.05-.83-2.32-1.93-2.91c-1.72-.91-2.7-1.41-4.44-2.32c-1.12-.57-1.94-.16-1.95.87m5.79-10.39l1.28 2.71c-.4.85-.61 1.28-1.03 2.12c.36-.03.54-.04.9-.07c.48-.64.72-.96 1.18-1.6c-.42-.99-.64-1.49-1.08-2.48c1.22.67 1.82 1.01 2.93 1.66c0 3.58-2.34 5.16-5.86 3.32c-3.52-1.83-5.85-5.92-5.85-9.51c2.63 1.31 4.38 2.17 7.53 3.85" />
-                        </g>
-                        <path fill="#ffe0b2"
-                            d="M-61.86 42.33c-.5-.37-54.32-28.49-54.32-28.49l-16.68 8.6l55.11 28.37c4.76-2.45 12.32-6.35 16.12-8.3a1.2 1.2 0 0 0-.23-.18" />
-                        <path fill="#bf9f85"
-                            d="M-61.63 42.5c-8.34 3.77-16.5 8.11-16.5 8.11c.21.09.73.74.73.74c-.03 1.16-.05 2.31-.08 3.47c-.14 5.95-.22 11.91-.42 17.86c.67-.4 1.48.48 2.09 0c.94-.74 2.94-4 3.24-4.1c.4-.13.83-.03 1.24-.05c1.8-.1 5.83-3.77 6.69-3.94c.83-.16 3.57.37 3.57.37s-.21-18.15-.26-21.2c-.02-.87-.3-1.26-.3-1.26" />
-                        <path fill="#dea66c"
-                            d="m223.81 4.84l-51.83 26.68c-2.52 1.48-1.8 5.09-1.8 5.09l55.17 28.3l55.07-27.86c.05-.17.11-1.21-.15-3.19c-.14-1.04-3.25-2.94-6.03-4.51c-28.53-16.12-47.29-24.42-47.29-24.42c-1.2-.47-2.2-.63-3.14-.09" />
-                        <path fill="#bf8049"
-                            d="M171.01 96.16c3.04 2.01 8.59 4.65 14.2 7.69c13.04 7.06 29.52 15.64 37.72 19.01c2.45 1.01 3.75.51 3.75.51s-1.15-56.3-1.11-59.45c.02-1.32-1.59-3.12-2.74-3.86c-1.78-1.14-5.64-2.92-5.64-2.92s-13.52-6.72-27.02-13.8c-6.42-3.37-11.84-6.82-17.67-9.66c-1.06-.52-2.33.12-2.32 1.31v59.8c0 .58.35 1.06.83 1.37" />
-                        <path fill="#9e673c"
-                            d="m278.85 96.51l-51.76 26.69c-.83.43-1.82-.17-1.82-1.11l.09-57.18c0-.55-.41-1.98-.56-2.48c-.14-.5.35-1.51.81-1.74l51.76-26.66c1.36-.7 2.99.29 2.99 1.82v58.19c0 1.04-.59 1.99-1.51 2.47" />
-                        <path fill="#784d30"
-                            d="M251.82 52.26c3.01-1.55 26.65-14.19 26.65-15.58c0-1.14-22.75 10.91-22.75 10.91S227.36 62.1 226.9 63.33c-.46 1.22 22.26-9.7 24.92-11.07" />
-                        <g fill="#784d30" opacity="0.85">
-                            <path
-                                d="M173.36 93.22c3.69 1.86 7.35 3.78 11.91 6.11v-1.78c-4.54-2.32-8.21-4.23-11.91-6.11zm7.77.8c1.04.53 1.56.8 2.54 1.3c.01-3.1.01-4.65.02-7.75c-.98-.5-1.49-.76-2.52-1.29c-.02 3.1-.03 4.65-.04 7.74m-6.46-3.31c.86.44 1.34.69 2.32 1.19l.05-7.72c-.99-.51-1.47-.75-2.34-1.21c-.01 3.09-.02 4.64-.03 7.74" />
-                            <path
-                                d="M179.5 86.36c2.37 1.21 3.63 1.86 5.72 2.92c-1.04-1.89-1.61-2.85-2.75-4.79c-1.17.76-1.78 1.13-2.97 1.87m-6.14-3.16c1.77.92 2.96 1.53 5.3 2.73c-1.16-1.95-1.74-2.92-2.81-4.83c-1.09.79-1.6 1.2-2.49 2.1" />
-                        </g>
-                        <g fill="#784d30" opacity="0.85">
-                            <path
-                                d="M192.35 101.77c.83.43 1.26.66 2.09 1.09c-.06-3.68-.09-5.52-.16-9.2c-.8-.42-1.2-.63-2-1.04c.04 3.66.05 5.49.07 9.15" />
-                            <path
-                                d="M189.31 101.12c3.04 1.6 5.4 2.8 8.32 4.36c-.02-1.05-.83-2.32-1.93-2.91c-1.72-.91-2.7-1.41-4.44-2.32c-1.12-.57-1.95-.16-1.95.87m5.79-10.39l1.28 2.71c-.4.85-.61 1.28-1.03 2.12c.36-.03.54-.04.9-.07c.48-.64.72-.96 1.18-1.6c-.42-.99-.64-1.49-1.08-2.48c1.22.67 1.82 1.01 2.93 1.66c0 3.58-2.34 5.16-5.86 3.32c-3.52-1.83-5.85-5.92-5.85-9.51c2.62 1.31 4.38 2.17 7.53 3.85" />
-                        </g>
-                        <path fill="#ffe0b2"
-                            d="M260.68 42.33c-.5-.37-54.32-28.49-54.32-28.49l-16.68 8.6l55.11 28.37c4.76-2.45 12.32-6.35 16.12-8.3c-.07-.06-.14-.12-.23-.18" />
-                        <path fill="#bf9f85"
-                            d="M260.91 42.5c-8.34 3.77-16.5 8.11-16.5 8.11c.21.09.73.74.73.74c-.03 1.16-.05 2.31-.08 3.47c-.14 5.95-.22 11.91-.42 17.86c.67-.4 1.48.48 2.09 0c.94-.74 2.94-4 3.24-4.1c.4-.13.83-.03 1.24-.05c1.8-.1 5.83-3.77 6.69-3.94c.83-.16 3.57.37 3.57.37s-.21-18.15-.26-21.2c-.02-.87-.3-1.26-.3-1.26" />
-                        <path fill="#dea66c"
-                            d="m566.51 4.84l-51.83 26.68c-2.52 1.48-1.8 5.09-1.8 5.09l55.17 28.3l55.07-27.86c.05-.17.11-1.21-.15-3.19c-.14-1.04-3.25-2.94-6.03-4.51c-28.53-16.12-47.29-24.42-47.29-24.42c-1.2-.47-2.2-.63-3.14-.09" />
-                        <path fill="#bf8049"
-                            d="M513.71 96.16c3.04 2.01 8.59 4.65 14.2 7.69c13.04 7.06 29.52 15.64 37.72 19.01c2.45 1.01 3.75.51 3.75.51s-1.15-56.3-1.11-59.45c.02-1.32-1.59-3.12-2.74-3.86c-1.78-1.14-5.64-2.92-5.64-2.92s-13.52-6.72-27.02-13.8c-6.42-3.37-11.84-6.82-17.67-9.66c-1.06-.52-2.33.12-2.32 1.31v59.8c0 .58.35 1.06.83 1.37" />
-                        <path fill="#9e673c"
-                            d="m621.55 96.51l-51.76 26.69c-.83.43-1.82-.17-1.82-1.11l.09-57.18c0-.55-.41-1.98-.56-2.48c-.14-.5.35-1.51.81-1.74l51.76-26.66c1.36-.7 2.99.29 2.99 1.82v58.19a2.82 2.82 0 0 1-1.51 2.47" />
-                        <path fill="#784d30"
-                            d="M594.52 52.26c3.01-1.55 26.65-14.19 26.65-15.58c0-1.14-22.75 10.91-22.75 10.91S570.06 62.1 569.6 63.33c-.46 1.22 22.26-9.7 24.92-11.07" />
-                        <g fill="#784d30" opacity="0.85">
-                            <path
-                                d="M516.06 93.22c3.69 1.86 7.35 3.78 11.91 6.11v-1.78c-4.54-2.32-8.21-4.23-11.91-6.11zm7.76.8c1.04.53 1.56.8 2.54 1.3c.01-3.1.01-4.65.02-7.75c-.98-.5-1.49-.76-2.52-1.29c-.01 3.1-.02 4.65-.04 7.74m-6.45-3.31c.86.44 1.34.69 2.32 1.19l.05-7.72c-.99-.51-1.47-.75-2.34-1.21c-.01 3.09-.02 4.64-.03 7.74" />
-                            <path
-                                d="M522.2 86.36c2.37 1.21 3.64 1.86 5.72 2.92c-1.04-1.89-1.61-2.85-2.75-4.79c-1.17.76-1.78 1.13-2.97 1.87m-6.14-3.16c1.77.92 2.96 1.53 5.3 2.73c-1.16-1.95-1.74-2.92-2.81-4.83c-1.09.79-1.61 1.2-2.49 2.1" />
-                        </g>
-                        <g fill="#784d30" opacity="0.85">
-                            <path
-                                d="M535.05 101.77c.83.43 1.26.66 2.09 1.09c-.06-3.68-.09-5.52-.16-9.2c-.8-.42-1.2-.63-2-1.04c.04 3.66.05 5.49.07 9.15" />
-                            <path
-                                d="M532.01 101.12c3.04 1.6 5.4 2.8 8.32 4.36c-.02-1.05-.83-2.32-1.93-2.91c-1.72-.91-2.7-1.41-4.44-2.32c-1.13-.57-1.95-.16-1.95.87m5.79-10.39l1.28 2.71c-.4.85-.61 1.28-1.03 2.12c.36-.03.54-.04.9-.07c.48-.64.72-.96 1.18-1.6c-.42-.99-.64-1.49-1.08-2.48c1.22.67 1.82 1.01 2.93 1.66c0 3.58-2.34 5.16-5.86 3.32s-5.85-5.92-5.85-9.51c2.62 1.31 4.38 2.17 7.53 3.85" />
-                        </g>
-                        <path fill="#fce8b2"
-                            d="M603.38 42.33c-.5-.37-54.32-28.49-54.32-28.49l-16.68 8.6l55.11 28.37c4.76-2.45 12.32-6.35 16.12-8.3c-.07-.06-.14-.12-.23-.18" />
-                        <path fill="#ecb354"
-                            d="M603.61 42.5c-8.34 3.77-16.5 8.11-16.5 8.11c.21.09.72.74.72.74c-.03 1.16-.05 2.31-.08 3.47c-.14 5.95-.22 11.91-.42 17.86c.67-.4 1.48.48 2.09 0c.94-.74 2.94-4 3.24-4.1c.4-.13.83-.03 1.24-.05c1.8-.1 5.83-3.77 6.69-3.94c.83-.16 3.57.37 3.57.37s-.21-18.15-.26-21.2c-.01-.87-.29-1.26-.29-1.26" />
-                        <path fill="#dea66c"
-                            d="m62.54 216.07l-51.83 26.68c-2.52 1.48-1.8 5.09-1.8 5.09l55.17 28.3l55.07-27.86c.05-.17.11-1.21-.15-3.19c-.14-1.04-3.25-2.94-6.03-4.51c-28.53-16.12-47.29-24.42-47.29-24.42c-1.2-.47-2.2-.63-3.14-.09" />
-                        <path fill="#bd8955"
-                            d="M9.74 307.39c3.04 2.01 8.59 4.65 14.2 7.69c13.04 7.06 29.52 15.64 37.72 19.01c2.45 1.01 3.75.51 3.75.51s-1.15-56.3-1.11-59.45c.02-1.32-1.59-3.12-2.74-3.86c-1.78-1.14-5.64-2.92-5.64-2.92s-13.52-6.72-27.02-13.8c-6.42-3.37-11.84-6.82-17.67-9.66c-1.06-.52-2.33.12-2.32 1.31v59.8c0 .59.35 1.06.83 1.37" />
-                        <path fill="#a06841"
-                            d="m117.58 307.74l-51.76 26.69c-.83.43-1.82-.17-1.82-1.11l.09-57.18c0-.55-.41-1.98-.56-2.48c-.14-.5.35-1.51.81-1.74l51.76-26.66c1.36-.7 2.99.29 2.99 1.82v58.19c0 1.04-.58 1.99-1.51 2.47" />
-                        <path fill="#784d30"
-                            d="M90.55 263.49c3.01-1.55 26.65-14.19 26.65-15.58c0-1.14-22.75 10.91-22.75 10.91s-28.37 14.51-28.83 15.74c-.44 1.22 22.27-9.7 24.93-11.07" />
-                        <g fill="#784d30" opacity="0.73">
-                            <path
-                                d="M12.09 304.45c3.69 1.86 7.35 3.78 11.91 6.11v-1.78c-4.54-2.32-8.21-4.23-11.91-6.11zm7.77.8c1.04.53 1.56.8 2.54 1.3c.01-3.1.01-4.65.02-7.75c-.98-.5-1.49-.76-2.52-1.29c-.02 3.1-.03 4.65-.04 7.74m-6.46-3.31c.86.44 1.34.69 2.32 1.19l.05-7.72c-.99-.51-1.47-.75-2.34-1.21c-.01 3.09-.02 4.64-.03 7.74" />
-                            <path
-                                d="M18.23 297.59c2.37 1.21 3.63 1.86 5.72 2.92c-1.04-1.89-1.61-2.85-2.75-4.79c-1.17.76-1.78 1.13-2.97 1.87m-6.14-3.16c1.77.92 2.96 1.53 5.3 2.73c-1.16-1.95-1.74-2.92-2.81-4.83c-1.09.79-1.6 1.2-2.49 2.1" />
-                        </g>
-                        <g fill="#784d30" opacity="0.73">
-                            <path
-                                d="M31.09 313c.83.43 1.26.66 2.09 1.09c-.06-3.68-.09-5.52-.16-9.2c-.8-.42-1.2-.63-2-1.04c.03 3.66.04 5.49.07 9.15" />
-                            <path
-                                d="M28.04 312.35c3.04 1.6 5.4 2.8 8.32 4.36c-.02-1.05-.83-2.33-1.93-2.91c-1.72-.91-2.7-1.41-4.44-2.32c-1.12-.57-1.95-.16-1.95.87m5.79-10.39l1.28 2.71c-.4.85-.61 1.28-1.03 2.12c.36-.03.54-.04.9-.07c.48-.64.72-.96 1.18-1.6c-.42-.99-.64-1.49-1.08-2.48c1.22.67 1.82 1.01 2.93 1.66c0 3.58-2.34 5.16-5.86 3.32c-3.52-1.83-5.85-5.92-5.85-9.51c2.62 1.31 4.38 2.17 7.53 3.85" />
-                        </g>
-                        <path fill="#fce8b2"
-                            d="M99.41 253.56c-.5-.37-54.32-28.49-54.32-28.49l-16.68 8.6l55.11 28.37c4.76-2.45 12.32-6.35 16.12-8.3c-.06-.06-.14-.12-.23-.18" />
-                        <path fill="#ecb354"
-                            d="M99.64 253.73c-8.34 3.77-16.5 8.11-16.5 8.11c.21.09.73.74.73.74c-.03 1.16-.05 2.31-.08 3.47c-.14 5.95-.22 11.91-.42 17.86c.67-.4 1.48.48 2.09 0c.94-.74 2.94-4 3.24-4.1c.4-.13.83-.03 1.24-.05c1.8-.1 5.83-3.77 6.69-3.94c.83-.16 3.57.37 3.57.37s-.21-18.15-.26-21.2c-.02-.87-.3-1.26-.3-1.26" />
-                        <path fill="#e6a467"
-                            d="m401.82 4.84l-51.83 26.68c-2.52 1.48-1.8 5.09-1.8 5.09l55.17 28.3l55.07-27.86c.05-.17.11-1.21-.15-3.19c-.14-1.04-3.25-2.94-6.03-4.51c-28.53-16.12-47.29-24.42-47.29-24.42c-1.2-.47-2.2-.63-3.14-.09" />
-                        <path fill="#d68b52"
-                            d="M349.02 96.16c3.04 2.01 8.59 4.65 14.2 7.69c13.04 7.06 29.52 15.64 37.72 19.01c2.45 1.01 3.75.51 3.75.51s-1.15-56.3-1.11-59.45c.02-1.32-1.59-3.12-2.74-3.86c-1.78-1.14-5.64-2.92-5.64-2.92s-13.52-6.72-27.02-13.8c-6.42-3.37-11.84-6.82-17.67-9.66c-1.06-.52-2.33.12-2.32 1.31v59.8c0 .58.35 1.06.83 1.37" />
-                        <path fill="#a06841"
-                            d="M456.86 96.51L405.1 123.2c-.83.43-1.82-.17-1.82-1.11l.09-57.18c0-.55-.41-1.98-.56-2.48c-.14-.5.35-1.51.81-1.74l51.76-26.66c1.36-.7 2.99.29 2.99 1.82v58.19a2.82 2.82 0 0 1-1.51 2.47" />
-                        <path fill="#784d30"
-                            d="M429.83 52.26c3.01-1.55 26.65-14.19 26.65-15.58c0-1.14-22.75 10.91-22.75 10.91S405.36 62.1 404.9 63.33c-.45 1.22 22.27-9.7 24.93-11.07" />
-                        <g fill="#784d30" opacity="0.73">
-                            <path
-                                d="M351.37 93.22c3.69 1.86 7.35 3.78 11.91 6.11v-1.78c-4.54-2.32-8.21-4.23-11.91-6.11zm7.76.8c1.04.53 1.56.8 2.54 1.3c.01-3.1.01-4.65.02-7.75c-.98-.5-1.49-.76-2.52-1.29c-.01 3.1-.02 4.65-.04 7.74m-6.45-3.31c.86.44 1.34.69 2.32 1.19l.05-7.72c-.99-.51-1.47-.75-2.35-1.21c0 3.09-.01 4.64-.02 7.74" />
-                            <path
-                                d="M357.51 86.36c2.37 1.21 3.64 1.86 5.72 2.92c-1.04-1.89-1.61-2.85-2.75-4.79c-1.17.76-1.78 1.13-2.97 1.87m-6.14-3.16c1.77.92 2.96 1.53 5.3 2.73c-1.16-1.95-1.74-2.92-2.81-4.83c-1.09.79-1.61 1.2-2.49 2.1" />
-                        </g>
-                        <g fill="#784d30" opacity="0.73">
-                            <path
-                                d="M370.36 101.77c.83.43 1.26.66 2.09 1.09c-.06-3.68-.09-5.52-.16-9.2c-.8-.42-1.2-.63-2-1.04c.04 3.66.05 5.49.07 9.15" />
-                            <path
-                                d="M367.32 101.12c3.04 1.6 5.4 2.8 8.32 4.36c-.02-1.05-.83-2.32-1.93-2.91c-1.72-.91-2.7-1.41-4.44-2.32c-1.13-.57-1.95-.16-1.95.87m5.79-10.39l1.28 2.71c-.4.85-.61 1.28-1.03 2.12c.36-.03.54-.04.9-.07c.48-.64.72-.96 1.18-1.6c-.42-.99-.64-1.49-1.08-2.48c1.22.67 1.82 1.01 2.93 1.66c0 3.58-2.34 5.16-5.86 3.32c-3.52-1.83-5.85-5.92-5.85-9.51c2.62 1.31 4.38 2.17 7.53 3.85" />
-                        </g>
-                        <path fill="#fce8b2"
-                            d="M438.69 42.33c-.5-.37-54.32-28.49-54.32-28.49l-16.68 8.6l55.11 28.37c4.76-2.45 12.32-6.35 16.12-8.3c-.07-.06-.14-.12-.23-.18" />
-                        <path fill="#ecb354"
-                            d="M438.92 42.5c-8.34 3.77-16.5 8.11-16.5 8.11c.21.09.73.74.73.74c-.03 1.16-.05 2.31-.08 3.47c-.14 5.95-.22 11.91-.42 17.86c.67-.4 1.48.48 2.09 0c.94-.74 2.94-4 3.24-4.1c.4-.13.83-.03 1.24-.05c1.8-.1 5.83-3.77 6.69-3.94c.83-.16 3.57.37 3.57.37s-.21-18.15-.26-21.2c-.02-.87-.3-1.26-.3-1.26" />
-                        <path fill="#e6a475"
-                            d="m-240.63 4.84l-51.83 26.68c-2.52 1.48-1.8 5.09-1.8 5.09l55.17 28.3l55.07-27.86c.05-.17.11-1.21-.15-3.19c-.14-1.04-3.25-2.94-6.03-4.51c-28.53-16.12-47.29-24.42-47.29-24.42c-1.2-.47-2.2-.63-3.14-.09" />
-                        <path fill="#c78c61"
-                            d="M-293.43 96.16c3.04 2.01 8.59 4.65 14.2 7.69c13.04 7.06 29.52 15.64 37.72 19.01c2.45 1.01 3.75.51 3.75.51s-1.15-56.3-1.11-59.45c.02-1.32-1.59-3.12-2.74-3.86c-1.78-1.14-5.64-2.92-5.64-2.92s-13.52-6.72-27.02-13.8c-6.42-3.37-11.84-6.82-17.67-9.66c-1.06-.52-2.33.12-2.32 1.31v59.8c0 .58.35 1.06.83 1.37" />
-                        <path fill="#a06841"
-                            d="m-185.59 96.51l-51.76 26.69c-.83.43-1.82-.17-1.82-1.11l.09-57.18c0-.55-.41-1.98-.56-2.48c-.14-.5.35-1.51.81-1.74l51.76-26.66c1.36-.7 2.99.29 2.99 1.82v58.19a2.82 2.82 0 0 1-1.51 2.47" />
-                        <path fill="#784d30"
-                            d="M-212.62 52.26c3.01-1.55 26.65-14.19 26.65-15.58c0-1.14-22.75 10.91-22.75 10.91s-28.37 14.51-28.83 15.74c-.45 1.22 22.26-9.7 24.93-11.07" />
-                        <g fill="#784d30" opacity="0.73">
-                            <path
-                                d="M-291.08 93.22c3.69 1.86 7.35 3.78 11.91 6.11v-1.78c-4.54-2.32-8.21-4.23-11.91-6.11zm7.76.8c1.04.53 1.56.8 2.54 1.3c.01-3.1.01-4.65.02-7.75c-.98-.5-1.49-.76-2.52-1.29c-.01 3.1-.02 4.65-.04 7.74m-6.45-3.31c.86.44 1.34.69 2.32 1.19l.05-7.72c-.99-.51-1.47-.75-2.34-1.21c-.01 3.09-.02 4.64-.03 7.74" />
-                            <path
-                                d="M-284.95 86.36c2.37 1.21 3.63 1.86 5.72 2.92c-1.04-1.89-1.61-2.85-2.75-4.79c-1.16.76-1.77 1.13-2.97 1.87m-6.13-3.16c1.77.92 2.96 1.53 5.3 2.73c-1.16-1.95-1.74-2.92-2.81-4.83c-1.09.79-1.61 1.2-2.49 2.1" />
-                        </g>
-                        <g fill="#784d30" opacity="0.73">
-                            <path
-                                d="M-272.09 101.77c.83.43 1.26.66 2.09 1.09c-.06-3.68-.09-5.52-.16-9.2c-.8-.42-1.2-.63-2-1.04c.04 3.66.05 5.49.07 9.15" />
-                            <path
-                                d="M-275.13 101.12c3.04 1.6 5.4 2.8 8.32 4.36c-.02-1.05-.83-2.32-1.93-2.91c-1.72-.91-2.7-1.41-4.44-2.32c-1.13-.57-1.95-.16-1.95.87m5.79-10.39l1.28 2.71c-.4.85-.61 1.28-1.03 2.12c.36-.03.54-.04.9-.07c.48-.64.72-.96 1.18-1.6c-.42-.99-.64-1.49-1.08-2.48c1.22.67 1.82 1.01 2.93 1.66c0 3.58-2.34 5.16-5.86 3.32s-5.85-5.92-5.85-9.51c2.62 1.31 4.38 2.17 7.53 3.85" />
-                        </g>
-                        <path fill="#fce8b2"
-                            d="M-203.76 42.33c-.5-.37-54.32-28.49-54.32-28.49l-16.68 8.6l55.11 28.37c4.76-2.45 12.32-6.35 16.12-8.3c-.07-.06-.14-.12-.23-.18" />
-                        <path fill="#ecb354"
-                            d="M-203.54 42.5c-8.34 3.77-16.5 8.11-16.5 8.11c.21.09.73.74.73.74c-.03 1.16-.05 2.31-.08 3.47c-.14 5.95-.22 11.91-.42 17.86c.67-.4 1.48.48 2.09 0c.94-.74 2.94-4 3.24-4.1c.4-.13.83-.03 1.24-.05c1.8-.1 5.83-3.77 6.69-3.94c.83-.16 3.57.37 3.57.37s-.21-18.15-.26-21.2c-.01-.87-.3-1.26-.3-1.26" />
-                        <path fill="#e6a475"
-                            d="m90.29-146.79l-10.47 5.4l-21.48 11.07c-3.76 1.94-7.53 3.87-11.29 5.81c-2.52 1.3-7.89 2.93-8.71 6.08c-.18.71-.11 1.45-.03 2.18c.36 3.32.27 6.27 2.43 8.9c2.04 2.48 5.47 5.8 9.01 5.8c8.11 2.65 15.85 6.28 23.82 9.3c7.12 2.7 16.09 6.9 23.36 2.82c.88-.49 1.6-1.16 2.49-1.6c1.19-.59 2.43-1.05 3.61-1.68c3.35-1.77 6.3-4.2 9.47-6.26c5.34-3.48 11.24-5.92 16.99-8.61c2.89-1.35 5.76-2.77 8.49-4.42a48 48 0 0 0 3.96-2.65c.98-.73 2.71-1.74 3.05-3.01c.05-.17.07-.34.07-.52c-.01-.7-.41-1.34-.94-1.79c-1.76-1.5-4.26-2.28-6.33-3.19c-2.7-1.18-5.24-2.87-7.81-4.32c-5.42-3.06-10.88-6.04-16.38-8.93a676 676 0 0 0-12.28-6.3c-2.11-1.05-4.22-2.09-6.34-3.13c-1.36-.66-3.13-1.75-4.69-.95" />
-                        <path fill="#a06841"
-                            d="M38.78-57.74c.77.88 1.81 1.52 2.83 2.1c5.09 2.89 10.31 5.52 15.53 8.2c2.61 1.35 5.23 2.69 7.84 4.04c2.57 1.33 5.15 2.65 7.72 3.98l6.93 3.57c1.82.94 3.64 1.88 5.46 2.81c1.1.57 2.2 1.14 3.31 1.7c1.41.73 2.39 1.44 4.02.85c1.36-.49 1.44-2.15 1.75-3.43c.86-3.51 1.22-7.13 1.37-10.74c.21-4.78.05-9.58-.1-14.36c-.18-5.74.18-11.49-.06-17.26c-.07-1.58-.11-3.17-.16-4.74c-.04-1.39-.89-2.66-1.7-3.74c-.99-1.31-2.11-2.69-2.18-4.33c-.13-2.69-2.81-3.47-4.83-4.36c-3.05-1.35-5.99-3.01-8.96-4.53a1074 1074 0 0 1-31.34-16.7c-1.25-.69-8.13-6.01-8.16-2.05c-.16 17.81-.33 35.61-.62 53.42c-.03 1.6-.03 3.29.75 4.68c.17.35.37.63.6.89" />
-                        <path fill="#c78c61"
-                            d="M144.15-57.63c-1.05 1.05-2.57 1.8-4.5 2.79c-4.13 2.12-8.27 4.25-12.4 6.37c-8.41 4.32-16.81 8.64-25.22 12.95c-1.83.94-8.1 5.04-10.16 4.15c-1.58-.68-.62-8.5-.62-10.22v-33.5c0-4.14.39-8.53-.27-12.61c-.2-1.24-.42-2.39.33-3.49c1.2-1.74 4.09-2.67 5.93-3.62c2.23-1.15 4.46-2.3 6.7-3.45c5.66-2.92 11.31-5.83 16.97-8.75l13.5-6.96c2.41-1.24 5.07-3.18 7.66-3.95c2.3-.68 2.74 1.36 2.88 3.28c.4 5.75.33 11.58.46 17.34c.26 11.46.42 22.91.5 34.37c.02 2.61-.58 4.13-1.76 5.3" />
-                        <path fill="#a06841"
-                            d="M117.23-100.16c2.95-1.52 26.07-13.88 26.08-15.24c0-1.12-22.26 10.67-22.26 10.67s-27.76 14.2-28.2 15.4c-.45 1.2 21.77-9.48 24.38-10.83" />
-                        <linearGradient id="notoPackage0" x1="28.2" x2="14.107" y1="-108.368" y2="-79.066"
-                            gradientTransform="matrix(-1 0 0 1 124.88 0)" gradientUnits="userSpaceOnUse">
-                            <stop offset=".31" stop-color="#fce8b2" />
-                            <stop offset=".399" stop-color="#ffcc80" />
-                        </linearGradient>
-                        <path fill="url(#notoPackage0)"
-                            d="M110.19-80.18c.2-5.82.28-11.65.41-17.47c.03-1.13.05-2.26.08-3.39c0 0-.01-.38-.21-.47l-54.04-27.82l16.32-8.41s52.65 27.51 53.14 27.87s.49.36.51 1.41c.04 2.98.09 5.96.13 8.94l.09 6.16c.01.88.48 3.14.03 3.94c-.44.78-2.68 1.18-3.49 1.34c-.84.16-1.73.23-2.48.66c-1.54.87-2.31 3.09-4.07 3.2c-.41.02-.83-.08-1.22.05c-.29.1-.52.31-.74.52c-.85.81-1.67 1.73-2.59 2.46c-.59.45-1.21.61-1.87 1.01" />
-                        <path fill="#ffcc80"
-                            d="M127.72-48.65c0-2.64-.18-8.15-.18-8.15s-2.07 1.76-3.37 2.25c-1.02.38-2.13.58-3.02 1.21c-.92.66-1.52 1.71-2.46 2.35c-2.32 1.59-5.48.96-5.48.96v8.86z" />
-                        <path fill="#7d5133"
-                            d="M40.47-60.08c3.61 1.82 7.19 3.7 11.66 5.98v-1.74c-4.44-2.27-8.03-4.14-11.66-5.98zm7.6.78c1.01.52 1.52.78 2.49 1.28c.01-3.03.01-4.55.02-7.58c-.95-.49-1.46-.74-2.47-1.26c-.02 3.02-.03 4.54-.04 7.56m-6.32-3.24c.85.43 1.31.67 2.27 1.16l.05-7.56c-.97-.5-1.43-.74-2.29-1.18c-.01 3.04-.02 4.55-.03 7.58" />
-                        <path fill="#7d5133"
-                            d="M46.47-66.8c2.31 1.19 3.56 1.82 5.59 2.86c-1.02-1.84-1.57-2.79-2.7-4.69c-1.12.75-1.72 1.11-2.89 1.83m-6-3.08c1.73.9 2.89 1.49 5.19 2.67c-1.14-1.91-1.7-2.86-2.75-4.72c-1.07.77-1.57 1.17-2.44 2.05m18.54 17.73c.82.42 1.23.64 2.05 1.07l-.15-9c-.78-.41-1.18-.62-1.95-1.02c.01 3.58.02 5.37.05 8.95" />
-                        <path fill="#7d5133"
-                            d="M56.03-52.78c2.97 1.57 5.29 2.74 8.14 4.27c-.02-1.03-.81-2.27-1.89-2.84c-1.68-.89-2.64-1.38-4.35-2.27c-1.09-.58-1.9-.17-1.9.84m5.66-10.17c.5 1.06.76 1.59 1.25 2.65c-.4.83-.6 1.25-1.01 2.08c.36-.03.53-.04.88-.07c.47-.63.7-.94 1.15-1.57c-.41-.97-.63-1.45-1.05-2.43c1.2.65 1.78.99 2.87 1.63c0 3.51-2.29 5.04-5.73 3.25s-5.72-5.8-5.72-9.3c2.56 1.28 4.28 2.11 7.36 3.76" />
-                    </svg>
+                    <img src="assets/image/transaksi-barang.svg" alt=" transaksi-barang-icon" loading="lazy">
+
                     <div class="space-y-2">
                         <h5 style="min-height: 60px;"
                             class="text-xl font-semibold text-[#020546] dark:text-white transition group-hover:text-secondary">
@@ -834,12 +557,8 @@
                     </div>
                     <a href="#" class="flex items-center justify-between group-hover:text-secondary">
                         <span class="text-sm">Read more</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        <img src="assets/image/go.svg" alt=" go-icon" loading="lazy"
                             class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-                            <path fill-rule="evenodd"
-                                d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
-                                clip-rule="evenodd"></path>
-                        </svg>
                     </a>
                 </div>
             </div>
@@ -848,15 +567,8 @@
             <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="500"
                 class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
                 <div class="relative space-y-8 py-12 p-8">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512">
-                        <path fill="#c2ccce"
-                            d="M505.999 104.494a23.07 23.07 0 0 0-19.614-19.615l-.329-.329H22.572l-.327.329A23.07 23.07 0 0 0 2.63 104.494l-.328.327v298.987l.328.329a23.07 23.07 0 0 0 19.615 19.615l.327.327h463.483l.329-.329a23.06 23.06 0 0 0 19.614-19.614l.329-.329V104.821z" />
-                        <path fill="#597b91" d="M2.302 149.609h504.024V236H2.302z" />
-                        <path fill="#fff"
-                            d="M442.478 294.697H69.522c-23.116 0-41.855 18.739-41.855 41.854c0 23.116 18.739 41.855 41.855 41.855h372.957c23.116 0 41.855-18.739 41.855-41.855c-.001-23.115-18.74-41.854-41.856-41.854" />
-                        <path fill="#597b91"
-                            d="M348.576 371.698q-1.694 0-3.326-.072c-13.51-.604-22.237-4.798-27.875-9.934c-19.207 9.371-42.187 13.168-51.84 4.363c-3.646-3.324-8.474-10.958.139-24.728c6.98-11.159 8.596-20.652 4.021-23.623c-5.534-3.594-19.407-.151-28.546 13.417c-7.215 10.713-20.291 21.218-34.977 28.101c-7.572 3.549-26.516 11.043-38.877 4.004c-6.398-3.643-15.306-13.61-3.072-39.438c1.489-3.144 1.483-4.788 1.364-5.117c-2.353-2.743-22.062-1.928-42.894 9.78c-13.271 7.458-20.56 16.171-18.57 22.195a7.501 7.501 0 0 1-14.244 4.705c-4.067-12.314 2.827-25.195 19.411-36.271c18.365-12.266 52.469-23.503 66.095-11.737c3.506 3.026 8.478 10.021 2.394 22.866c-4.848 10.233-6.078 18.263-3.062 19.979c8.7 4.959 40.956-8.093 53.991-27.447c6.122-9.09 14.594-15.913 23.857-19.215c9.37-3.34 18.591-2.759 25.3 1.596c9.678 6.284 14.898 21.184.527 44.159c-2.144 3.428-2.468 5.253-2.509 5.876c3.303 2.229 18.115.825 33.107-6.037c-2.906-8.005-2.909-17.684.06-27.01c3.132-9.841 8.966-17.644 15.605-20.872c10.473-5.092 18.629 1.841 22.433 9.324c7.173 14.11 1.809 29.42-14.717 42.004q-.484.37-.981.735c20.276 10.854 64.889-6.649 84.099-15.161a7.5 7.5 0 0 1 6.077 13.715c-29.741 13.177-54.27 19.843-72.99 19.843m-16.932-57.141c-1.332.248-5.402 3.743-8.013 11.238c-1.632 4.685-2.439 10.385-1.314 15.562q.544-.4 1.081-.811c7.26-5.556 14.942-14.089 10.318-23.186c-1.031-2.028-1.84-2.655-2.072-2.803" />
-                    </svg>
+
+                    <img src="assets/image/jenis-pembayaran.svg" alt=" pemesanan-barang" loading="lazy">
                     <div class="space-y-2">
                         <h5 style="min-height: 60px;"
                             class="text-xl font-semibold text-[#020546] dark:text-white transition group-hover:text- secondary">
@@ -868,12 +580,8 @@
                     </div>
                     <a href="#" class="flex items-center justify-between group-hover:text-secondary">
                         <span class="text-sm">Read more</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        <img src="assets/image/go.svg" alt=" go-icon" loading="lazy"
                             class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-                            <path fill-rule="evenodd"
-                                d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
-                                clip-rule="evenodd"></path>
-                        </svg>
                     </a>
                 </div>
             </div>
@@ -881,48 +589,7 @@
                 class="group relative bg-gray-50 dark:bg-gray-900 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
                 <div
                     class="relative space-y-8 py-12 p-8 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 28 28">
-                        <g fill="none">
-                            <path fill="url(#fluentColorDocument280)"
-                                d="M15 2H6.5A2.5 2.5 0 0 0 4 4.5v19A2.5 2.5 0 0 0 6.5 26h15a2.5 2.5 0 0 0 2.5-2.5V11l-7-2z" />
-                            <path fill="url(#fluentColorDocument283)" fill-opacity="0.5"
-                                d="M15 2H6.5A2.5 2.5 0 0 0 4 4.5v19A2.5 2.5 0 0 0 6.5 26h15a2.5 2.5 0 0 0 2.5-2.5V11l-7-2z" />
-                            <path fill="url(#fluentColorDocument284)" fill-opacity="0.3"
-                                d="M15 2H6.5A2.5 2.5 0 0 0 4 4.5v19A2.5 2.5 0 0 0 6.5 26h15a2.5 2.5 0 0 0 2.5-2.5V11l-7-2z" />
-                            <path fill="url(#fluentColorDocument281)" d="M15 9.5V2l9 9h-7.5A1.5 1.5 0 0 1 15 9.5" />
-                            <path fill="url(#fluentColorDocument282)" d="M15 9.5V2l9 9h-7.5A1.5 1.5 0 0 1 15 9.5" />
-                            <defs>
-                                <linearGradient id="fluentColorDocument280" x1="18" x2="19.388" y1="2" y2="20.598"
-                                    gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#6ce0ff" />
-                                    <stop offset="1" stop-color="#4894fe" />
-                                </linearGradient>
-                                <linearGradient id="fluentColorDocument281" x1="19.5" x2="19.5" y1="2" y2="11"
-                                    gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#d9d9d9" />
-                                    <stop offset="1" stop-color="#737373" />
-                                </linearGradient>
-                                <linearGradient id="fluentColorDocument282" x1="19.485" x2="17.235" y1="5.75" y2="9.5"
-                                    gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#9ff0f9" />
-                                    <stop offset="1" stop-color="#b3e0ff" />
-                                </linearGradient>
-                                <radialGradient id="fluentColorDocument283" cx="0" cy="0" r="1"
-                                    gradientTransform="rotate(133.966 11.833 6.65)scale(16.325 9.64965)"
-                                    gradientUnits="userSpaceOnUse">
-                                    <stop offset=".362" stop-color="#4a43cb" />
-                                    <stop offset="1" stop-color="#4a43cb" stop-opacity="0" />
-                                </radialGradient>
-                                <radialGradient id="fluentColorDocument284" cx="0" cy="0" r="1"
-                                    gradientTransform="rotate(133.966 11.833 6.65)scale(16.325 9.64965)"
-                                    gradientUnits="userSpaceOnUse">
-                                    <stop offset=".362" stop-color="#4a43cb" />
-                                    <stop offset="1" stop-color="#4a43cb" stop-opacity="0" />
-                                </radialGradient>
-                            </defs>
-                        </g>
-                    </svg>
-
+                    <img src="assets/image/pemesanan-barang.svg" alt=" pemesanan-barang" loading="lazy">
                     <div class="space-y-2">
                         <h5 style="min-height: 60px;"
                             class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
@@ -933,12 +600,8 @@
                     </div>
                     <a href="#" class="flex items-center justify-between group-hover:text-secondary">
                         <span class="text-sm">Read more</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        <img src="assets/image/go.svg" alt=" go-icon" loading="lazy"
                             class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-                            <path fill-rule="evenodd"
-                                d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
-                                clip-rule="evenodd"></path>
-                        </svg>
                     </a>
                 </div>
             </div>
@@ -947,7 +610,7 @@
 
 
     <!-- book section -->
-    <section class="bg-[#020546] text-white body-font my-10 overflow-x-hidden ">
+    <section class="bg-[#020546] text-white body-font my-10  ">
         <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
             <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"
                 class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
@@ -965,8 +628,7 @@
                 <div class="flex lg:flex-row md:flex-col">
                     <button
                         class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#272727" /90 class="w-6 h-6"
-                            viewBox="0 0 512 512">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#272727" class="w-6 h-6" viewBox="0 0 512 512">
                             <path
                                 d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z">
                             </path>
@@ -978,8 +640,7 @@
                     </button>
                     <button
                         class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0 hover:bg-gray-200 focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#272727" /90 class="w-6 h-6"
-                            viewBox="0 0 305 305">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#272727" class="w-6 h-6" viewBox="0 0 305 305">
                             <path
                                 d="M40.74 112.12c-25.79 44.74-9.4 112.65 19.12 153.82C74.09 286.52 88.5 305 108.24 305c.37 0 .74 0 1.13-.02 9.27-.37 15.97-3.23 22.45-5.99 7.27-3.1 14.8-6.3 26.6-6.3 11.22 0 18.39 3.1 25.31 6.1 6.83 2.95 13.87 6 24.26 5.81 22.23-.41 35.88-20.35 47.92-37.94a168.18 168.18 0 0021-43l.09-.28a2.5 2.5 0 00-1.33-3.06l-.18-.08c-3.92-1.6-38.26-16.84-38.62-58.36-.34-33.74 25.76-51.6 31-54.84l.24-.15a2.5 2.5 0 00.7-3.51c-18-26.37-45.62-30.34-56.73-30.82a50.04 50.04 0 00-4.95-.24c-13.06 0-25.56 4.93-35.61 8.9-6.94 2.73-12.93 5.09-17.06 5.09-4.64 0-10.67-2.4-17.65-5.16-9.33-3.7-19.9-7.9-31.1-7.9l-.79.01c-26.03.38-50.62 15.27-64.18 38.86z">
                             </path>
@@ -997,7 +658,7 @@
             </div>
     </section>
     <!-- book section //end -->
-    <section class="text-gray-600 dark:text-gray-300 mt-16 overflow-x-hidden " id="testimonial">
+    <section class="text-gray-600 dark:text-gray-300 mt-16 " id="testimonial">
         <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
             <div class="mb-20 space-y-4 px-6 md:px-0">
                 <!-- <h2 class="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl"> -->
@@ -1105,7 +766,7 @@
     </section>
 
 
-    <section class="bg-white py-10 md:py-16 dark:bg-[#01021c] overflow-x-hidden ">
+    <section class="bg-white py-10 md:py-16 dark:bg-[#01021c]  ">
 
         <div class="container max-w-screen-xl mx-auto px-4 xl:relative">
 
@@ -1117,23 +778,19 @@
 
 
                             <img data-aos="fade-left" data-aos-delay="0" data-aos-duration="800" loading="lazy"
-                                width="220" height="220"
-                                src="https://pbs.twimg.com/profile_images/1372441824560771075/DTcuXT0Z_400x400.jpg"
-                                alt="member photo" class="z-10 h-8 w-8 rounded-full object-cover">
+                                width="220" height="220" src="assets/image/testimoni-3.png" alt="member photo"
+                                loading="lazy" class="z-10 h-8 w-8 rounded-full object-cover">
                             <img data-aos="fade-left" data-aos-delay="200" data-aos-duration="800" loading="lazy"
-                                width="220" height="220"
-                                src="https://pbs.twimg.com/profile_images/1372441824560771075/DTcuXT0Z_400x400.jpg"
+                                width="220" height="220" src="assets/image/testimoni-4.png" loading="lazy"
                                 alt="member photo" class="z-10 h-12 w-12 rounded-full object-cover">
                             <img loading="lazy" width="220" height="220"
                                 src="https://pbs.twimg.com/profile_images/1372441824560771075/DTcuXT0Z_400x400.jpg"
                                 alt="member photo" class="z-10 h-16 w-16 rounded-full object-cover">
                             <img data-aos="fade-right" data-aos-delay="200" data-aos-duration="800" loading="lazy"
-                                width="220" height="220"
-                                src="https://pbs.twimg.com/profile_images/1398547148086681604/ctgizwrN_400x400.jpg"
+                                width="220" height="220" src="assets/image/testimoni-4.png" loading="lazy"
                                 alt="member photo" class="relative h-12 w-12 rounded-full object-cover">
                             <img data-aos="fade-right" data-aos-delay="0" data-aos-duration="800" loading="lazy"
-                                width="220" height="220"
-                                src="https://pbs.twimg.com/profile_images/1398547148086681604/ctgizwrN_400x400.jpg"
+                                width="220" height="220" src="assets/image/testimoni-3.png" loading="lazy"
                                 alt="member photo" class="h-8 w-8 rounded-full object-cover">
                         </div>
                         <div class="m-auto space-y-6 md:w-8/12 lg:w-7/12 ">
@@ -1178,7 +835,7 @@
 
 
                         <details
-                            class="group border-s-4 border-[#c391fa ] bg-gray-50 p-2 [&_summary::-webkit-details-marker]:hidden"
+                            class="group border-s-4 border-[#020546]/80 bg-gray-50 p-2 [&_summary::-webkit-details-marker]:hidden"
                             open>
                             <summary class="flex cursor-pointer items-center justify-between gap-1.5">
                                 <h2 class="text-lg font-medium text-gray-900">
@@ -1203,7 +860,7 @@
                         </details>
 
                         <details
-                            class="group border-s-4 border-[#c391fa ] bg-gray-50 p-2 [&_summary::-webkit-details-marker]:hidden">
+                            class="group border-s-4 border-[#020546]/80 bg-gray-50 p-2 [&_summary::-webkit-details-marker]:hidden">
                             <summary class="flex cursor-pointer items-center justify-between gap-1.5">
                                 <h2 class="text-lg font-medium text-gray-900">
                                     Fitur apa saja yang tersedia dalam aplikasi POS ini?
@@ -1232,7 +889,7 @@
                     <div class="grid gap-2  grid-cols-1 md:grid-cols-2">
 
                         <details
-                            class="group border-s-4 border-[#c391fa ] bg-gray-50 p-2 [&_summary::-webkit-details-marker]:hidden">
+                            class="group border-s-4 border-[#020546]/80 bg-gray-50 p-2 [&_summary::-webkit-details-marker]:hidden">
                             <summary class="flex cursor-pointer items-center justify-between gap-1.5">
                                 <h2 class="text-lg font-medium text-gray-900">
 
@@ -1257,7 +914,7 @@
 
 
                         <details
-                            class="group border-s-4 border-[#c391fa ] bg-gray-50 p-2 [&_summary::-webkit-details-marker]:hidden">
+                            class="group border-s-4 border-[#020546]/80 bg-gray-50 p-2 [&_summary::-webkit-details-marker]:hidden">
                             <summary class="flex cursor-pointer items-center justify-between gap-1.5">
                                 <h2 class="text-lg font-medium text-gray-900">
                                     Apakah data saya aman di aplikasi ini?
@@ -1282,7 +939,7 @@
 
                     </div>
                     <details
-                        class="group border-s-4 border-[#c391fa ] bg-gray-50 p-2 [&_summary::-webkit-details-marker]:hidden">
+                        class="group border-s-4 border-[#020546]/80 bg-gray-50 p-2 [&_summary::-webkit-details-marker]:hidden">
                         <summary class="flex cursor-pointer items-center justify-between gap-1.5">
                             <h2 class="text-lg font-medium text-gray-900">
                                 Bagaimana cara menghubungi layanan pelanggan jika saya memiliki pertanyaan? </h2>
@@ -1322,87 +979,33 @@
                         dengan Sellerku!
                     </p>
 
-                    <div class="mt-6 flex justify-center gap-4 lg:justify-start">
-                        <a class="text-gray-700 transition hover:text-gray-700/75" href="#" target="_blank"
-                            rel="noreferrer">
-                            <span class="sr-only"> Facebook </span>
 
-                            <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd"
-                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </a>
-
-                        <a class="text-gray-700 transition hover:text-gray-700/75" href="#" target="_blank"
-                            rel="noreferrer">
-                            <span class="sr-only"> Instagram </span>
-
-                            <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd"
-                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </a>
-
-                        <a class="text-gray-700 transition hover:text-gray-700/75" href="#" target="_blank"
-                            rel="noreferrer">
-                            <span class="sr-only"> Twitter </span>
-
-                            <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                            </svg>
-                        </a>
-
-                        <a class="text-gray-700 transition hover:text-gray-700/75" href="#" target="_blank"
-                            rel="noreferrer">
-                            <span class="sr-only"> GitHub </span>
-
-                            <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd"
-                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </a>
-
-                        <a class="text-gray-700 transition hover:text-gray-700/75" href="#" target="_blank"
-                            rel="noreferrer">
-                            <span class="sr-only"> Dribbble </span>
-
-                            <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd"
-                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
                 </div>
 
                 <div class="grid grid-cols-1 gap-8 text-center lg:grid-cols-3 lg:text-left">
                     <div>
-                        <strong class="font-medium text-gray-900"> Services </strong>
+                        <strong class="font-medium text-gray-900"> Layanan </strong>
 
                         <ul class="mt-6 space-y-1">
                             <li>
-                                <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> Marketing </a>
+                                <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> Konsultasi </a>
                             </li>
 
                             <li>
                                 <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
-                                    Graphic Design
+                                    Aplikasi
                                 </a>
                             </li>
 
                             <li>
                                 <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
-                                    App Development
+                                    Pengembagan
                                 </a>
                             </li>
 
                             <li>
                                 <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
-                                    Web Development
+                                    Website
                                 </a>
                             </li>
                         </ul>
@@ -1452,9 +1055,33 @@
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         AOS.init();
     </script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['APLIKASI POIN OF SALES MUDAH', 'APLIKASI POIN OF SALES MURAH', 'APLIKASI POIN OF SALES TERBAIK', 'APLIKASI POIN OF SALES  PALING EFESIEN'],
+            typeSpeed: 90,
+        });
+    </script>
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                header.classList.add('backdrop-blur-lg');
+                header.classList.remove('bg-white');
+                header.classList.add('bg-opacity-50'); // opsional untuk transparansi
+                header.classList.add('text-black'); // opsional untuk transparansi
+            } else {
+                header.classList.remove('backdrop-blur-lg');
+                header.classList.add('bg-white');
+                header.classList.remove('bg-opacity-70');
+                header.classList.add('text-gray'); // opsional untuk transparansi
+            }
+        });
+    </script>
+
 </body>
 
 
